@@ -1,6 +1,7 @@
 <?php
 
 use RobThree\Auth\TwoFactorAuth;
+
 use RobThree\Auth\Providers\Qr\EndroidQrCodeProvider;
 
 require_once __DIR__ . '/../vendor/autoload.php';
@@ -19,13 +20,6 @@ $secret = $tfa->createSecret();
 <?php
 $code = $tfa->getCode($secret);
 ?>
-
-When aforementioned code (<?php echo $code; ?>) was entered, the result would be:
-<?php if ($tfa->verifyCode($secret, $code) === true) { ?>
-    <span style="color:#0c0">OK</span>
-<?php } else { ?>
-    <span style="color:#c00">FAIL</span>
-<?php } ?>
 
 <form action="check.php" method="post">
     <input type="hidden" name="secret" value="<?= $secret ?>">
