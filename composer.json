@@ -1,0 +1,18 @@
+{
+    "name": "macono/mf-aphp",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kevins Markuss Kanalis",
+            "email": "KevinsKanalis@gmail.com"
+        }
+    ],
+    "require": {
+        "robthree/twofactorauth": "^3.0",
+        "endroid/qr-code": "^3.0"
+    }
+}
